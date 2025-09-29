@@ -1,8 +1,11 @@
 package org.gowtham.request;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class CreateStudentRequest {
     private String name;
     private String rollNo;

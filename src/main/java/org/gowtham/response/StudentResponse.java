@@ -1,8 +1,11 @@
 package org.gowtham.response;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class StudentResponse {
     private int id;
     private String name;
