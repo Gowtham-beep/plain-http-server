@@ -119,7 +119,7 @@ public class Studenthandler implements HttpHandler {
             return;
         }
         int id = Integer.parseInt(parts[2]);
-        boolean deleted = repository.delete(id);
+        boolean deleted = repository.remove(id);
         if (!deleted) {
             exchange.sendResponseHeaders(404, -1);
             return;
