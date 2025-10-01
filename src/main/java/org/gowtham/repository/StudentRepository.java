@@ -19,4 +19,16 @@ public class StudentRepository {
     public Student findById(int id){
         return db.get(id);
     }
+    public Student update(int id, Student student){
+        if(!db.containsKey(id)){
+            return null;
+        }
+        student.setId(id);
+        db.put(id,student);
+        return student;
+    }
+    public boolean remove(int id){
+        return db.remove(id)!= null;
+    }
+
 }
